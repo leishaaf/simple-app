@@ -1,5 +1,6 @@
 import express from "express";
-import Info from "./db.js"
+import fs from "fs/promises";
+
 
 const app = express()
 
@@ -11,8 +12,8 @@ app.get('/', (req, res) => {
 });
 
 app.post("/api/info", async (req, res) => {
-    const newInfo = new Info({name: req.body.name, email: req.body.email, classes: req.body.classes,level: req.body.level, expectations: req.body.expectations});
-    await newInfo.save();
+    const line = JSON.stringify(req.body) + "\n";
+    await fs.appendFile("./output.json", line);
     console.log("Saved")
     res.send("Saved!")
 });
