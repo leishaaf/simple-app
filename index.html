@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <h1>Welcome to the App</h1>
+    <form id="thisForm">
+        <div class="form">
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Jane Doe">
+        </div>
+        <br>
+        <div class="form">
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="jane.doe@gmail.com">
+        </div>
+        <div class="form">
+            <p>College Level</p>
+            <label for="bs">BS</label>
+            <input type="radio" id="bs" name="level" value="bs" checked>
+            <label for="ms">MS</label>
+            <input type="radio" id="ms" name="level" value="ms" >
+        </div>
+        <br>
+        <div class="form">
+            <label for="classes">Classes Taken: </label>
+            <input type="text" id="classes" placeholder="CS112, CS111, etc">
+        </div>
+        <br>
+        <div class="form">
+            <label for="expectations">Classes Expectations: </label>
+            <input type="text" id="expectations" placeholder="Good lectures, helpful slides, etc">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
