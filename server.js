@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.post("/api/info", async (req, res) => {
-    const newInfo = new Info({name: req.body.name, email: req.body.email, level: req.body.level, expectations: req.body.expectations});
+    const newInfo = new Info({name: req.body.name, email: req.body.email, classes: req.body.classes,level: req.body.level, expectations: req.body.expectations});
     await newInfo.save();
     console.log("Saved")
     res.send("Saved!")
